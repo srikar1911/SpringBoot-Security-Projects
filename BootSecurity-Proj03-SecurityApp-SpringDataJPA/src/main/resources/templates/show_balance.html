@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Balance Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: red;
+            font-size: 28px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Balance Page</h1>
+        <h1 th:style="'color: red; text-align: center'">Account Balance is: <span th:text="${account_balance}">account_balance</span></h1>
+        <a th:href="@{/bank/home}">Home</a>
+        <a th:href="@{/logout}">LOGOUT</a>
+    </div>
+</body>
+</html>

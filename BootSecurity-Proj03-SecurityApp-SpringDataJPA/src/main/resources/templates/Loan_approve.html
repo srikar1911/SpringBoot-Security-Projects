@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Approval Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Loan Approval Page</h1>
+
+    <h1 th:style="'color: red; text-align: center'">Loan for the amount <span th:text="${approved_amount}">approved_amount</span> is approved</h1>
+
+    <br><a th:href="@{/bank/home}">Home</a>
+    <a th:href="@{/logout}">LOGOUT</a>
+</body>
+</html>
